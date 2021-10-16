@@ -22,7 +22,8 @@ mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true }, () => {
 })
 
 //Listening on
-app.listen(5000, () => {
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
     console.log("Backend sever is running!");
 })
 
