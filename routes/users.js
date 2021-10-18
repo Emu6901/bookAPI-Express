@@ -1,60 +1,33 @@
-// const express = require('express');
-// const router = express.Router();
-// const Book = require('../models/Book')
+const express = require('express');
+const userController = require('./../controllers/userController');
+const authController = require('./../controllers/authController');
 
-// router.get('/', async (req, res) => {
-//     try {
-//         const books = await Book.find();
-//         res.json(books);
-//     } catch (error) {
-//         res.json({ message: error })
-//     }
-// })
+const router = express.Router();
 
-// router.post('/', async (req, res) => {
-//     const book = new Book(req.body);
-//     try {
-//         const savedBook = await book.save();
-//         res.status(200).json(savedBook);
-//     } catch (error) {
-//         res.status(500).json(error);
-//     }
-// })
+router.post('/signup', authController.signup);
+router.post('/login', authController.login);
+// router.post('/forgotPassword', authController.forgotPassword);
+// router.patch('/resetPassword/:token', authController.resetPassword);
 
-// router.get('/:id', async (req, res) => {
-//     try {
-//         const book = await Book.findById(req.params.id);
-//         res.status(200).json(book);
-//     } catch (error) {
-//         res.status(500).json(error);
-//     }
+// // Protect all routes after this middleware
+// router.use(authController.protect);
 
-// })
+// router.patch('/updateMyPassword', authController.updatePassword);
+// router.get('/me', userController.getMe, userController.getUser);
+// router.patch('/updateMe', userController.updateMe);
+// router.delete('/deleteMe', userController.deleteMe);
 
-// router.delete('/:id', async (req, res) => {
-//     try {
-//         const removedBook = await Book.findById(req.params.id);
-//         if (removedBook.bookId === req.body.bookId) {
-//             await removedBook.deleteOne();
-//             res.status(200).json("The book has been deleted");
-//         } else {
-//             res.status(403).json("You can delete only book");
-//         }
-//     } catch (error) {
-//         res.status(500).json(error);
-//     }
-// })
+// router.use(authController.restrictTo('admin'));
 
-// router.patch('/:id', async (req, res) => {
-//     try {
-//         const updatedBook = await Book.updateOne(
-//             { _id: req.params.id },
-//             { $set: req.body  }
-//         );
-//         res.status(200).json("the book has been updated");
-//     } catch (error) {
-//         res.status(500).json(error);
-//     }
-// })
+router
+  .route('/')
+  .get(userController.getAllUsers)
+  .post(userController.createUser);
 
-// module.exports = router;
+// router
+//   .route('/:id')
+//   .get(userController.getUser)
+//   .patch(userController.updateUser)
+//   .delete(userController.deleteUser);
+
+module.exports = router;

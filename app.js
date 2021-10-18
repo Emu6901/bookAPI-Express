@@ -10,7 +10,8 @@ app.use(bodyParser.json());
 //Import ROUTES
 const booksRoutes = require('./routes/books')
 app.use('/books', booksRoutes)
-
+const userRouter = require('./routes/users');
+app.use('/users', userRouter);
 //ROUTES
 app.get('/', (req, res) => {
     res.send('Hello')
