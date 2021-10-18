@@ -4,7 +4,8 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
 const bodyParser = require('body-parser');
-
+const cors = require('cors');
+app.use(cors());
 app.use(bodyParser.json());
 
 //Import ROUTES
