@@ -64,7 +64,6 @@ exports.getAll = Model =>
     // To allow for nested GET reviews on book (hack)
     let filter = {};
     if (req.params.bookId) filter = { book: req.params.bookId };
-    console.log(req.query)
     const features = new APIFeatures(Model.find(filter), req.query)
       .filter()
       .sort()

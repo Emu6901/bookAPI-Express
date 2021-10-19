@@ -6,16 +6,22 @@ const authController = require('./../controllers/authController');
 
 router
     .route('/')
-    .get(bookController.getAllBooks)
+    .get(
+        // authController.protect,
+        bookController.getAllBooks
+        )
     .post(
-        authController.protect,
+        // authController.protect,
         // authController.restrictTo('admin', 'lead-guide'),
         bookController.createBook
     );
 
 router
     .route('/:id')
-    .get(bookController.getBook)
+    .get(
+        // authController.protect,
+        bookController.getBook
+        )
     .patch(
         // authController.protect,
         // authController.restrictTo('admin', 'lead-guide'),
