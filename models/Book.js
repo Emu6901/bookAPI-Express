@@ -13,10 +13,6 @@ const BookSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        copyrightYear: {
-            type: Date,
-            default: new Date().toISOString().slice(0, 10),
-        },
         available: {
             type: Number,
             required: true,
@@ -30,7 +26,6 @@ const BookSchema = mongoose.Schema(
             default: "",
         },
     },
-    { timestamps: true }
 );
 
 module.exports = mongoose.model("Book", BookSchema);

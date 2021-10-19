@@ -15,7 +15,6 @@ const UserSchema = mongoose.Schema(
             default: "",
         },
     },
-    { timestamps: true }
 )
 
 UserSchema.methods.correctPassword = async function (
