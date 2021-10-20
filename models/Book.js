@@ -25,7 +25,19 @@ const BookSchema = mongoose.Schema(
             type: String,
             default: "",
         },
-    },
+        star: {
+            type: Number,
+            required: true,
+        },
+        numberOfPages: {
+            type: Number,
+            required: true,
+        },
+        description: {
+            type: String,
+            default: "",
+        },
+    }
 );
 
 module.exports = mongoose.model("Book", BookSchema);
