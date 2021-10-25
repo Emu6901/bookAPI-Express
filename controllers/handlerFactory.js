@@ -1,6 +1,8 @@
 const catchAsync = require('./../utils/catchAsync');
 const AppError = require('./../utils/appError');
 const APIFeatures = require('./../utils/apiFeatures');
+const fileupload = require('express-fileupload');
+const { cloudinary } = require('./../utils/cloudinary');
 
 exports.deleteOne = Model =>
   catchAsync(async (req, res, next) => {
@@ -35,6 +37,16 @@ exports.updateOne = Model =>
 
 exports.createOne = Model =>
   catchAsync(async (req, res, next) => {
+    // console.log(fileStr);
+    if (req.files) {
+      const fileStr = req.files.img;
+      const uploadResponse = await cloudinary.uploader.upload(fileStr.tempFilePath, {
+        upload_preset: 'books',
+        public_id: `${Date.now()}`,
+        resource_type: "auto"
+      });
+      req.body.img = uploadResponse.url
+    }
     const doc = await Model.create(req.body);
 
     res.status(201).json({

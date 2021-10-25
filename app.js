@@ -6,8 +6,11 @@ dotenv.config();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const AppError = require('./utils/appError');
+const fileupload = require('express-fileupload');
+// const { cloudinary } = require('./utils/cloudinary');
 app.use(cors());
 app.use(bodyParser.json());
+app.use(fileupload({ useTempFiles: true }))
 
 //Import ROUTES
 const booksRoutes = require('./routes/books')
@@ -19,7 +22,9 @@ app.all('*', (req, res, next) => {
     next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
 app.use((err, req, res, next) => {
-    res.status(500).send(err.message);
+    res.status(500).send({
+        Error: err.message,
+    });
 });
 
 //Connect to db

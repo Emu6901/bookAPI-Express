@@ -1,0 +1,235 @@
+[{
+  "_id": {
+    "$oid": "6170286375666fd0d09d00e5"
+  },
+  "bookId": "Book013",
+  "bookName": "Handbook of Geometric Computing",
+  "author": "Eduardo Dias",
+  "available": 5,
+  "category": "DS and Algorithm",
+  "img": "https://res.cloudinary.com/thefour123/image/upload/v1634745113/books/geometry_sqzmaw.jpg",
+  "star": 4.5,
+  "numberOfPages": 123,
+  "description": "Many computer scientists, engineers, applied mathematicians, and physicists use geometry theory and geometric computing methods in the design of perception-action systems, intelligent autonomous systems, and man-machine interfaces. "
+},{
+  "_id": {
+    "$oid": "6170297575666fd0d09d00e8"
+  },
+  "bookId": "Book014",
+  "bookName": "Data Structures and algorithm analysis in java",
+  "author": "Mark Allen Weiss",
+  "available": 7,
+  "category": "DS and Algorithm",
+  "img": "https://res.cloudinary.com/thefour123/image/upload/v1634657883/books/20_l7qylv.jpg",
+  "star": 4,
+  "numberOfPages": 300,
+  "description": "Data Structures and Algorithm Analysis in Java is an “advanced algorithms” book that fits between traditional CS2 and Algorithms Analysis courses."
+},{
+  "_id": {
+    "$oid": "6170301745d6eafe2e1d295d"
+  },
+  "bookId": "Book015",
+  "bookName": "Javascript Patterns",
+  "author": "Stoyan Stefanov",
+  "available": 9,
+  "category": "Web Development",
+  "img": "https://res.cloudinary.com/thefour123/image/upload/v1634657886/books/46_kqeqgq.jpg",
+  "star": 3.5,
+  "numberOfPages": 156,
+  "description": "In this book we will explore applying both classical and modern design patterns to the JavaScript programming language."
+},{
+  "_id": {
+    "$oid": "617030e745d6eafe2e1d2960"
+  },
+  "bookId": "Book016",
+  "bookName": "React Quickly",
+  "author": "Azat Mardan",
+  "available": 3,
+  "category": "Web Development",
+  "img": "https://res.cloudinary.com/thefour123/image/upload/v1634657885/books/35_i3b1uq.jpg",
+  "star": 4,
+  "numberOfPages": 432,
+  "description": "React Quickly is for anyone who wants to learn React. js fast. This hands-on book teaches you the concepts you need with lots of examples, tutorials, and a large main project that gets built throughout."
+},{
+  "_id": {
+    "$oid": "6170320245d6eafe2e1d2964"
+  },
+  "bookId": "Book017",
+  "bookName": "Machine Learning for Hackers",
+  "author": "O'Reilly",
+  "available": 9,
+  "category": "Artificial Intelligence",
+  "img": "https://res.cloudinary.com/thefour123/image/upload/v1634657884/books/24_xisid7.jpg",
+  "star": 5,
+  "numberOfPages": 857,
+  "description": "Machine Learning for Hackers is ideal for programmers from any background, including business, government, and academic research. Develop a naïve Bayesian classifier to determine if an email is spam, based only on its text."
+},{
+  "_id": {
+    "$oid": "6170331b45d6eafe2e1d2967"
+  },
+  "bookId": "Book018",
+  "bookName": "Actionable Intelligence",
+  "author": "Keith Carter'",
+  "available": 1,
+  "category": "Artificial Intelligence",
+  "img": "https://res.cloudinary.com/thefour123/image/upload/v1634743021/books/ac_in_oo0i7k.jpg",
+  "star": 5,
+  "numberOfPages": 473,
+  "description": "Keith Carter's Actionable Intelligence: A Guide to Delivering Business Results with Big Data Fast! is the comprehensive guide to achieving the dream that business intelligence practitioners have been chasing since the concept itself came into being."
+},{
+  "_id": {
+    "$oid": "6171530733d6fbf7e59a6dc0"
+  },
+  "bookId": "BookID20",
+  "bookName": "Rich Habits",
+  "author": "Richards Nas",
+  "available": 2,
+  "category": "Philsolopy",
+  "img": "https://salt.tikicdn.com/cache/w1200/ts/product/ce/74/19/92f1fd8499cabe963a8e0559e721398f.jpg",
+  "star": 4,
+  "numberOfPages": 220,
+  "description": "The book \"The Difference Between Rich and Poor\" helps you develop rich habits and break poor habits."
+},{
+  "_id": {
+    "$oid": "6171537b33d6fbf7e59a6dc3"
+  },
+  "bookId": "BookID21",
+  "bookName": "The Math Book",
+  "author": "Cliff Ringe",
+  "available": 5,
+  "category": "Math",
+  "img": "https://images-na.ssl-images-amazon.com/images/I/81OrIk+OffL.jpg",
+  "star": 5,
+  "numberOfPages": 500,
+  "description": "The best math book for beginners"
+},{
+  "_id": {
+    "$oid": "617153ef33d6fbf7e59a6dc7"
+  },
+  "bookId": "BookID22",
+  "bookName": "CSS For Beginners",
+  "author": "Simon Collision",
+  "available": 12,
+  "category": "Web Development",
+  "img": "https://images-na.ssl-images-amazon.com/images/I/71j6aLBlXbL.jpg",
+  "star": 5,
+  "numberOfPages": 555,
+  "description": "There are many books available on CSS, but this one is different ― it wastes less time discussing theory, and gets straight to the practical learning, quickly giving readers what they need to know. In addition, it is completely up to date"
+},{
+  "_id": {
+    "$oid": "6171545233d6fbf7e59a6dca"
+  },
+  "bookId": "BookID23",
+  "bookName": "JQuery For Everyone",
+  "author": "John Ducket",
+  "available": 5,
+  "category": "Web Development",
+  "img": "https://miro.medium.com/max/780/0*3gU21DDDsItcq4Ah.png",
+  "star": 4,
+  "numberOfPages": 120,
+  "description": "This book by Jon Duckett is incredibly popular. If you are a beginner in designing or web development and just recently started learning HTML and CSS"
+},{
+  "_id": {
+    "$oid": "617154c933d6fbf7e59a6dcd"
+  },
+  "bookId": "BookID24",
+  "bookName": "Activities for Exploring",
+  "author": "Caroline Arnold",
+  "available": 15,
+  "category": "Geography",
+  "img": "https://images-na.ssl-images-amazon.com/images/I/51T4p-GrkxL._SX389_BO1,204,203,200_.jpg",
+  "star": 4.5,
+  "numberOfPages": 1500,
+  "description": "Get to Know the Earth's Many Forms with Dozens of Fun and EasyProjects"
+},{
+  "_id": {
+    "$oid": "6171551033d6fbf7e59a6dd0"
+  },
+  "bookId": "BookID25",
+  "bookName": "Bard of Avon",
+  "author": "Diane Stanley",
+  "available": 12,
+  "category": "Geography",
+  "img": "https://images-na.ssl-images-amazon.com/images/I/61XNO9HhcnL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+  "star": 3.5,
+  "numberOfPages": 255,
+  "description": "Celebrate 400 years of Shakespeare's legacy with this repackage of award-winning author Diane Stanley's tribute to the world-famous playwright William Shakespeare. "
+},{
+  "_id": {
+    "$oid": "6171557033d6fbf7e59a6dd3"
+  },
+  "bookId": "BookID26",
+  "bookName": "Leonardo Da Vinci",
+  "author": "Emily Hahn",
+  "available": 10,
+  "category": "Geography",
+  "img": "https://images-na.ssl-images-amazon.com/images/I/51c3GkOTBqL._SX461_BO1,204,203,200_.jpg",
+  "star": 4,
+  "numberOfPages": 256,
+  "description": "Leonardo da Vinci was trained to be a painter and, in fact, produced what is arguable the most famous painting in the world, the \"Mona Lisa\""
+},{
+  "_id": {
+    "$oid": "617155c033d6fbf7e59a6dd5"
+  },
+  "bookId": "BookID27",
+  "bookName": "Putnam and Beyond",
+  "author": "Răzvan Gelca",
+  "available": 16,
+  "category": "Math",
+  "img": "https://images-na.ssl-images-amazon.com/images/I/41x2qV+hynL._SX348_BO1,204,203,200_.jpg",
+  "star": 5,
+  "numberOfPages": 1202,
+  "description": "This book takes the reader on a journey through the world of college mathematics, focusing on some of the most important concepts and results in the theories of polynomials, linear algebra, real analysis"
+},{
+  "_id": {
+    "$oid": "617155f033d6fbf7e59a6dd7"
+  },
+  "bookId": "BookID28",
+  "bookName": "102 Combinatorial Problems",
+  "author": "Titu Andreescu",
+  "available": 12,
+  "category": "Math",
+  "img": "https://images-na.ssl-images-amazon.com/images/I/41rNU4dubFL._SX331_BO1,204,203,200_.jpg",
+  "star": 5,
+  "numberOfPages": 500,
+  "description": "\"102 Combinatorial Problems\" consists of carefully selected problems that have been used in the training and testing of the USA International Mathematical Olympiad (IMO) team"
+},{
+  "_id": {
+    "$oid": "61716c2b33d6fbf7e59a6e0e"
+  },
+  "bookId": "BookID29",
+  "bookName": "How to be good math",
+  "author": "Jonas Acker",
+  "available": 12,
+  "category": "Math",
+  "img": "https://images.routledge.com/common/jackets/originals/978185346/9781853468179.tif",
+  "star": 4.5,
+  "numberOfPages": 223,
+  "description": "This book will help you become a Math master"
+},{
+  "_id": {
+    "$oid": "61716c6933d6fbf7e59a6e10"
+  },
+  "bookId": "BookID30",
+  "bookName": "Master Geomatry",
+  "author": "William Shake",
+  "available": 12,
+  "category": "Math",
+  "img": "https://images-na.ssl-images-amazon.com/images/I/51BuMEO3rtL._SX389_BO1,204,203,200_.jpg",
+  "star": 4.5,
+  "numberOfPages": 1022,
+  "description": "This book will help you become a Geomatry master"
+},{
+  "_id": {
+    "$oid": "61717cde07997178231487ea"
+  },
+  "bookId": "BookID30",
+  "bookName": "Exploring Geomatry",
+  "author": "Daniel James",
+  "available": 2,
+  "category": "Math",
+  "img": "https://images.routledge.com/common/jackets/crclarge/978149876/9781498760805.jpg",
+  "star": 3.5,
+  "numberOfPages": 200,
+  "description": "Second Edition promotes student engagement with the beautiful ideas of geometry. Every major concept is introduced in its historical "
+}]
