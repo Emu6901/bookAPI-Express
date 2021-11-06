@@ -7,10 +7,13 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const AppError = require('./utils/appError');
 const fileupload = require('express-fileupload');
+const multer = require("multer");
 // const { cloudinary } = require('./utils/cloudinary');
 app.use(cors());
-app.use(bodyParser.json());
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: true}))
 app.use(fileupload({ useTempFiles: true }))
+app.use(multer().array())
 
 //Import ROUTES
 const booksRoutes = require('./routes/books')
