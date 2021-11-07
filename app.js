@@ -16,10 +16,12 @@ app.use(fileupload({ useTempFiles: true }))
 app.use(multer().array())
 
 //Import ROUTES
-const booksRoutes = require('./routes/books')
-app.use('/books', booksRoutes)
-const userRouter = require('./routes/users');
-app.use('/users', userRouter);
+const v1Routes = require('./routes/v1/v1Router')
+app.use('/v1', v1Routes)
+// const booksRoutes = require('./routes/v1/books')
+// app.use('/books', booksRoutes)
+// const userRouter = require('./routes/v1/users');
+// app.use('/users', userRouter);
 //ROUTES
 app.all('*', (req, res, next) => {
     next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));

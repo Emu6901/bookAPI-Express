@@ -115,7 +115,6 @@ exports.getAll = Model =>
     const doc = await features.query;
 
     // await setCache(path, doc);
-
     // SEND RESPONSE
     res.status(200).json({
       status: 'success',

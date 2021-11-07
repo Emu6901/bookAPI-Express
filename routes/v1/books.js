@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const Book = require('../models/Book')
-const bookController = require('./../controllers/bookController');
-const authController = require('./../controllers/authController');
+const Book = require('../../models/Book')
+const bookController = require('../../controllers/bookController');
+const authController = require('../../controllers/authController');
 
 router
     .route('/')
