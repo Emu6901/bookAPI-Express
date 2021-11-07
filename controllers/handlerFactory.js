@@ -3,15 +3,15 @@ const AppError = require('./../utils/appError');
 const APIFeatures = require('./../utils/apiFeatures');
 const fileupload = require('express-fileupload');
 const { cloudinary } = require('./../utils/cloudinary');
-const { getCache, setCache, clearCache } = require('../cache/redisCache');
+// const { getCache, setCache, clearCache } = require('../cache/redisCache');
 
 
 exports.deleteOne = Model =>
   catchAsync(async (req, res, next) => {
     const doc = await Model.findByIdAndDelete(req.params.id);
 
-    path = req.path;
-    await clearCache(path);
+    // path = req.path;
+    // await clearCache(path);
 
     if (!doc) {
       return next(new AppError('No document found with that ID', 404));
@@ -30,8 +30,8 @@ exports.updateOne = Model =>
       runValidators: true
     });
 
-    path = req.path;
-    await clearCache(path);
+    // path = req.path;
+    // await clearCache(path);
 
     if (!doc) {
       return next(new AppError('No document found with that ID', 404));
@@ -66,15 +66,15 @@ exports.createOne = Model =>
 exports.getOne = (Model, popOptions) =>
   catchAsync(async (req, res, next) => {
 
-    path = req.path;
-    let data = await getCache(path);
-    if (data !== null) {
-      return res.status(304).json({
-        status: 'success',
-        results: data.length,
-        data: data
-      });
-    }
+    // path = req.path;
+    // let data = await getCache(path);
+    // if (data !== null) {
+    //   return res.status(304).json({
+    //     status: 'success',
+    //     results: data.length,
+    //     data: data
+    //   });
+    // }
 
     let query = Model.findById(req.params.id);
     if (popOptions) query = query.populate(popOptions);
@@ -83,7 +83,7 @@ exports.getOne = (Model, popOptions) =>
     if (!doc) {
       return next(new AppError('No document found with that ID', 404));
     }
-    await setCache(path, doc);
+    // await setCache(path, doc);
     res.status(200).json({
       status: 'success',
       data: doc
@@ -93,15 +93,16 @@ exports.getOne = (Model, popOptions) =>
 exports.getAll = Model =>
   catchAsync(async (req, res, next) => {
     // To allow for nested GET reviews on book (hack)
-    path = req.path;
-    let data = await getCache(path);
-    if (data !== null) {
-      return res.status(304).json({
-        status: 'success',
-        results: data.length,
-        data: data
-      });
-    }
+
+    // path = req.path;
+    // let data = await getCache(path);
+    // if (data !== null) {
+    //   return res.status(304).json({
+    //     status: 'success',
+    //     results: data.length,
+    //     data: data
+    //   });
+    // }
 
     let filter = {};
     if (req.params.bookId) filter = { book: req.params.bookId };
@@ -112,7 +113,9 @@ exports.getAll = Model =>
       .paginate();
     // const doc = await features.query.explain();
     const doc = await features.query;
-    await setCache(path, doc);
+
+    // await setCache(path, doc);
+
     // SEND RESPONSE
     res.status(200).json({
       status: 'success',
